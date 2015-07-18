@@ -1,0 +1,96 @@
+LoginInfo:
+        - the same as the one in StockWatcher
+
+LoginServiceAsync: <<interface>>
+        - handles login requests.  Similar to the one in
+        StockWatcher
+
+LiquorProp (serializable):  <<interface>>
+        - contains all the fields, getters and setters of
+        the properties of the liquor
+        - each attribute should have it's own getter and
+        setter
+
+LiquorPropServiceAsync:  <<interface>>
+        - is responsible for the 'get' methods
+        - it will get 'get' all the properties of liquor
+        such as:  Volume, Alcohol %, mL, Name, SKU, etc
+
+
+LiquorServiceAsync:  <<interface>>
+        - responsible for adding, getting and removing a
+        liquor object
+
+LiquorLocationsServAsync: <<interface>>
+        - gets the address of the desired liquor store
+
+LiquorLocationPinsAsync:  <<interface>>
+        - adds and removes the locations on the Google Map
+        - also gets the location (someone please check on my
+        logic)
+
+LiquorNotesContentServAsync: <<interface>>
+        - has a get method that is able to get the contents
+        of a note.
+
+NotesServiceAsync:  <<interface>>
+        - has the ability to add, remove notes from a user.
+
+Beerbarossa:   (will be in the client package, in this case, parallel
+        to 'StockWatcher' class in the example)
+        - a class which will contain the 'onModuleLoad',
+        responsible for inheriting the EntryPoint interface
+        - forms a relationship for ClickEvent and
+        ClickHandler
+
+
+WITHIN THE com.google.gwt.core.client.parser PACKAGE:
+
+ParserClass:
+        - Responsible for cracking open the .csv file
+        - Extracting pieces of data that are of interest to
+        us
+
+DataPusher-Upper:
+        - Solely responsible for knowing about the parsed
+        data and then 'uploading' it to the server
+
+WITHIN THE com.google.gwt.core.client.ui PACKAGE:
+
+DropDownMenu:
+        - contains the code for handling drop-down menus
+        - contains the functionality for displaying the
+        text
+        - and handling the selection of the text
+        We will also keep HorizontalPanel to lay out all our widgets
+        (drop-down menu)
+
+WITHIN THE server side:
+
+Notes:
+        - the Notes class is what is persistent with JDO.
+        - in this class, every attribute is persistent
+        - each note must belong to a user
+        - it should contain a field with an ID, creation
+        date, and contents
+
+NoteServiceImpl:
+        - impleemnts the NoteService class and contains
+        calls to the JDO API for persistent stock data.
+        - this method should contain a "checkedLoggedIn" to
+        make sure that the user is logged in.  It is the only way we can
+        see which notes belong to the user.
+        - forms a RELATIONSHIP with the four classes of the
+        javax.jdo package for persistence
+
+(the rest of the *Impl classes just inherit the interfaces from the client class,
+ and can be used by the server package)
+
+GoogleMapsAPI <<interface>>:
+        - contains the necessary components to display the
+        Google Map
+        - for doing this, I followed this logic:
+        http://stackoverflow.com/questions/9462456/how-to-show-in-a-class-diagram-that-im-using-external-api
+
+
+

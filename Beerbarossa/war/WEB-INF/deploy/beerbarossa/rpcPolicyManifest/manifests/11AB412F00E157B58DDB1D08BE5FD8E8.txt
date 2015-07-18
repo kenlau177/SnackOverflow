@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.beerbarossa.client.NoteService
+path: 2A5C8D9DF99D11158493B09193E7E4D0.gwt.rpc

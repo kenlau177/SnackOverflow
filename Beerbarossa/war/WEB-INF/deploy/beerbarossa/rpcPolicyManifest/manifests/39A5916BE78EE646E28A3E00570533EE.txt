@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.beerbarossa.client.TwitterService
+path: 0324C2479B299D56709ABD1B3FD880E7.gwt.rpc

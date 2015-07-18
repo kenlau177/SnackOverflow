@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>LiquorServlet</servlet-name>
+		<servlet-class>com.google.gwt.beerbarossa.server.LiquorServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LiquorServlet</servlet-name>
+		<url-pattern>/beerbarossa/liquors</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LocationsServlet</servlet-name>
+		<servlet-class>com.google.gwt.beerbarossa.server.LocationServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LocationsServlet</servlet-name>
+		<url-pattern>/beerbarossa/locations</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>loginService</servlet-name>
+		<servlet-class>com.google.gwt.beerbarossa.server.LoginServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>loginService</servlet-name>
+		<url-pattern>/beerbarossa/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>noteService</servlet-name>
+		<servlet-class>com.google.gwt.beerbarossa.server.NoteServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>noteService</servlet-name>
+		<url-pattern>/beerbarossa/note</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+  		<servlet-name>twitterService</servlet-name>
+  		<servlet-class>com.google.gwt.beerbarossa.server.TwitterServiceImpl</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>twitterService</servlet-name>
+  		<url-pattern>/beerbarossa/twitter</url-pattern>
+  	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Beerbarossa.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

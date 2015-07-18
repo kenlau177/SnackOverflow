@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.beerbarossa.client.LoginService
+path: 4B88A2AFB85F55369A2622B49F6F295C.gwt.rpc

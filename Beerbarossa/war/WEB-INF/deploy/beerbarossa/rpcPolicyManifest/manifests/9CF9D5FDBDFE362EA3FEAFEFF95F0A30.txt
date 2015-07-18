@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.beerbarossa.client.LocationService
+path: E796620074E9E3C32766FC0B3E6EFC49.gwt.rpc

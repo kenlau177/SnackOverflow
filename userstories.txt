@@ -1,0 +1,77 @@
+
+Import and Clean Data:
+-- As an admin, I want to import the dataset from the data.gov.bc.ca website so that 
+	I have information to parse for product information.
+	- check that the uploaded data matches the dataset from the data.gove.bc.ca website.
+	
+-- As an admin, I want to parse the	imported dataset so that I can display 
+	product information for the users.
+	- check that the parsed data set is in the desired format.
+
+Storage:
+-- As an admin, I want to store the most current version of the data onto our web application
+ so that the data will persist for the users.
+ - check that data shows up for non-admin users  
+
+Data Display:
+-- As an admin/user could be able to display the data in sorted categories
+   when I parse the data it should be sorted under the correct headings such as "beer", "wine", etc.
+        - there should be a drop down menu which displays to users the possible categories for wines.
+        - then another drop down menu appears which can be price, so the user can narrow the search
+          results further.
+        - If price isn't listed, then it will simply say 'unknown'
+        - when I select the categories or prices or liquor, it should not be ambiguous (such as text boxes)
+        drop down menus are a good way to prevent typos since it only offers you a certain choices
+        - check that the number of columns are correct in my table otherwise display warning.
+        - check that the table does not exceed a certain size otherwise display error, and tell
+				the user to re-enter search.
+
+        -- As a user, I want to be able to search for a particular liquor so that the information of the locations
+        of this liquor is displayed.
+        - check that
+        if I enter the full product name of a liquor, returns a list of locations
+        - check
+        that I can also enter the sku number, and returns a list of locations
+        - check
+        that I can filter the results, by entering product class name, product type name,
+        product sub class name, product minor class name.
+
+        -- As a user, I want to see on google map the locations of the closest liquor stores relative to my
+        coordinates
+        - check
+        that the locations are actually the closest based on dataset.
+        - check
+        that icons are displayed on the map for the locations.
+
+        Social Network Integration:
+        -- As a user, I would like to be able to tweet about the beer that I have bought so that
+        my followers can know where to buy said liquor if they like it.
+        - check
+        that a button could be pressed so that a message can be tweeted to all twitter users
+        that are following your account.
+        - check
+        that the tweet appears in your own twitter page.
+        - If the tweet is successfully tweeted, then display tweet confirmation message
+        - If the tweet is unsuccessfully tweeted, then display message tweet not sent and try again
+
+        Access:
+        -- As a logged in user I would like to be able to see notes I've made about what liquor I've bought at each
+        store so I can know where to buy what I want.
+        - when
+        user selects a store icon on the map, it shows a popup of these notes, with a button
+        for adding new notes.
+        - when
+        there are no notes, a message will say "This user has no history"
+
+        -- As a user, I want to be able to enter an address, so that the I can find the closest liquor stores
+        on a map
+        - check
+        that address can be entered in a textbox that can locate your current address.
+        - check
+        that given the current address, the closest liquor store results are returned
+        - check
+        that the address and liquor store locations are displayed on google map are displayed
+        and correct.
+        -If there are no liquor stores nearby, e.g. within 10km, then return a message that there are no liquor stores nearby
+        -If the address cannot be located by Google maps, then return a message that the address is invalid and ask them to try again.
+

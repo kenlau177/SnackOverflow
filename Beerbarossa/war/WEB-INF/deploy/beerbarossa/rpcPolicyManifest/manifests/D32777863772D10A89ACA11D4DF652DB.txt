@@ -1,0 +1,2 @@
+serviceClass: com.google.gwt.beerbarossa.client.LiquorService
+path: D7D9963DC564BCF165C5AB4803473633.gwt.rpc
