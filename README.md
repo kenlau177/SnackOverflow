@@ -1,6 +1,13 @@
 Operation Beerbarossa
 =====================
 
+Group Members:
+
+- Kevin Tanyag
+- Devon Graham
+- Evan Ng
+- Ken Lau
+
 ## To use the app, follow this url:
 http://1-dot-cpsc310demoapp.appspot.com
 
